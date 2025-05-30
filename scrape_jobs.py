@@ -15,7 +15,7 @@ def fetch_job_listings(start):
     url = BASE_URL.format(start)
     try:
         response = requests.get(url, headers=HEADERS)
-        response.raise_for_status()  # Raise an exception for bad responses (4xx, 5xx)
+        response.raise_for_status() 
         return response.text
     except requests.RequestException as e:
         print(f"Error fetching jobs at offset {start}: {e}")
@@ -89,13 +89,13 @@ def main():
             print(f" -> Extracted {len(jobs)} jobs.")
             all_jobs.extend(jobs) 
 
-    # Save all  to a CSV file
+    # Save CSV file
     if all_jobs:
         df = pd.DataFrame(all_jobs)
         df.to_csv("ai_jobs.csv", index=False, encoding='utf-8')
-        print(f"\n✅ Saved {len(all_jobs)} jobs to linkedin_ai_jobs_full.csv")
+        print(f"\nSaved {len(all_jobs)} jobs to linkedin_ai_jobs_full.csv")
     else:
-        print("❌ No jobs were scraped.")
+        print("No jobs were scraped.")
 
 if __name__ == "__main__":
     main()
