@@ -55,7 +55,7 @@ def parse_jobs(html):
             location = job.find('span', class_='job-search-card__location').text.strip()
             link = job.find('a', href=True)['href']
 
-            # Fetch additional details  from the individual job page
+    
             short_desc, posted_date = fetch_job_detail(link)
 
             # Sleep briefly to avoid being blocked by LinkedIn
@@ -76,7 +76,7 @@ def parse_jobs(html):
             continue
     return jobs
 
-# Main function controls the scraping flow
+# Main function 
 def main():
     all_jobs = []
 
@@ -89,7 +89,7 @@ def main():
             print(f" -> Extracted {len(jobs)} jobs.")
             all_jobs.extend(jobs) 
 
-    # Save all  to a CSV file
+    # Save  CSV file
     if all_jobs:
         df = pd.DataFrame(all_jobs)
         df.to_csv("ai_jobs.csv", index=False, encoding='utf-8')
