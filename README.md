@@ -25,5 +25,6 @@ pip install requests beautifulsoup4 pandas
 
 ##  Screen Shots
 ![Screenshot (1379)](https://github.com/user-attachments/assets/8b2be4ab-0ebe-4299-8543-eaf032c728c5)
+![Screenshot (1384)](https://github.com/user-attachments/assets/44e6956d-bdd8-4b03-8a4e-8bd73c8b246d)
 ![Screenshot (1381)](https://github.com/user-attachments/assets/2d6c2cd5-2618-4e48-b3eb-5d247603a23c)
 
