@@ -93,9 +93,9 @@ def main():
     if all_jobs:
         df = pd.DataFrame(all_jobs)
         df.to_csv("ai_jobs.csv", index=False, encoding='utf-8')
-        print(f"\n✅ Saved {len(all_jobs)} jobs to linkedin_ai_jobs_full.csv")
+        print(f"\n Saved {len(all_jobs)} jobs to linkedin_ai_jobs_full.csv")
     else:
-        print("❌ No jobs were scraped.")
+        print(" No jobs were scraped.")
 
 if __name__ == "__main__":
     main()
